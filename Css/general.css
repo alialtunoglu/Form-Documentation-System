@@ -1,0 +1,41 @@
+/*info içerisindeki belgelerin teker teker iç paddingi */
+.info ul li {
+    padding: 15px;
+    border-bottom: 1px solid #bdb8d7;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+/*Linklerin */
+.info ul li a {
+    padding: 0;
+    padding-left: 5px;
+    margin: 0;
+    display: block;
+}
+.info ul li a .fa-solid{
+    margin-right: 5px;
+}
+.info {
+    font-size: 18px;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.btn{
+    padding: 15px;
+    border-bottom: 1px solid #bdb8d7;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.btn .fa-sharp{
+    font-size: 18px;
+    margin-left: 10px;
+}
+.btn .sort-btn{
+    font-weight: bold;
+    font-size: 15px;
+    border: none !important;
+    background: none;
+    cursor: pointer;
+    margin-left: 28px;
+}

@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+body {
+  background-color: #f3f5f9;
+}
+/*.wrapper divi içerisindeki sidebar menü ve içerik kısmı yan yana getiriliyor*/
+.wrapper {
+
+  display: flex;
+  position: relative;
+}
+/*Sidebar yükseklik yüzde yüz bir şekilde en kenara sabitledik*/
+.wrapper .sidebar {
+  width: 220px;
+  height: 100%;
+  background: #4b4276;
+  padding: 0px 0px; /*Yukarıdan aşağıdan 30px olacak şekilde*/
+  position: fixed;
+}
+/*Başlığı alttan 30px boşluk olacak şekilde beyaz renkte büyük harf ve ortaladık*/
+
+.wrapper .sidebar h2 {
+  height: 90px !important;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 10px;
+  
+}
+.wrapper .sidebar h2 img{
+    max-width: 200px;
+    max-height: 70px;
+    background-size: cover;
+  
+}
+/*her bir liste elemanına kenarlık verdik ve her yerden 15pxlik padding iç boşluk atadık*/
+.wrapper .sidebar ul li {
+  padding: 15px;
+  border-bottom: 1px solid #bdb8d7;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+/*Her bir liste elemanındaki linklere bir renk verdik*/
+.wrapper .sidebar ul li a {
+  color: #bdb8d7;
+  display: block;
+}
+/*Üstteki ikonların genişliğini 25px yaptık*/
+.wrapper .sidebar ul li a .fas {
+  width: 25px;
+}
+/*Listedeki her bir elemana odaklandığında rengini değiştir*/
+.wrapper .sidebar ul li:hover {
+  background-color: #594f8d;
+}
+/*Linklerin yazı rengini beyaz yap*/
+.wrapper .sidebar ul li:hover a {
+  color: #fff;
+}
+/*iconları barındıran divi tamamen ortalamak için left ve transform kullandım*/
+.wrapper .sidebar .social_media {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+/*bütün linklerin ortak özellikleri*/
+.wrapper .sidebar .social_media a {
+  display: block;
+  width: 40px;
+  background: #594f8d;
+  height: 40px;
+  line-height: 45px;
+  text-align: center;
+  margin: 0 5px;
+  color: #bdb8d7;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.wrapper .main_content {
+  width: 100%;
+  margin-left: 220px;
+}
+.wrapper .main_content .header {
+  display: flex;
+  padding: 20px;
+  background: #fff;
+  color: #717171;
+  border-bottom: 1px solid #e0e4e8;
+}
+.wrapper .main_content .info {
+  margin: 20px;
+  color: #717171;
+  line-height: 25px;
+}
+/*genel info içerisindeki her bir divin içeriği alt taraftan 20px boşluk istedi*/
+.wrapper .main_content .info div {
+  margin-bottom: 20px;
+}
+.box {
+  display: flex;
+  cursor: pointer;
+  align-items: center; /*border içindeki elemanların ortaya gelmesini sağlar dikey olrak*/
+  height: 50px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+/* .box:hover input{
+    width: 400px;
+    height: 50px;
+} */
+.box input {
+  width: 500px;
+  outline: none;
+  border: none; /*input elemanının dış çizgisi ve kenarı kapatılıyor*/
+  font-weight: 500;
+  font-size: 17px;
+  transition: 0.8s;
+  background: transparent;
+}
+.box a .fas {
+  color: #1daf;
+  font-size: 20px;
+}
+.box2 {
+  display: flex;
+  margin-left: auto;
+  margin-bottom: auto;
+  cursor: pointer;
+  
+}
+.box2 .fa-solid {
+  font-size: 40px;
+  margin-left: 25px;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle:hover {
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-menu a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
